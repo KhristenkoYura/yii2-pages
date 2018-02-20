@@ -31,8 +31,8 @@ class m150429_155009_create_page_table extends Migration
                 'title_browser' => Schema::TYPE_STRING,
                 'meta_keywords' => Schema::TYPE_STRING . '(200)',
                 'meta_description' => Schema::TYPE_STRING . '(160)',
-                'created_at' => Schema::TYPE_TIMESTAMP . ' NOT NULL DEFAULT "0000-00-00 00:00:00"',
-                'updated_at' => Schema::TYPE_TIMESTAMP . ' NOT NULL DEFAULT "0000-00-00 00:00:00"',
+                'created_at' => Schema::TYPE_DATETIME . ' NOT NULL',
+                'updated_at' => Schema::TYPE_DATETIME . ' NOT NULL',
             ]
         );
         $this->createIndex('alias', $this->_tableName, ['alias'], true);
